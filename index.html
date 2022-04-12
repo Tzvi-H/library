@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1>My Library</h1>
+  </header>
+
+  <main>
+    <ul class="books-container"></ul>
+
+    <button class="add-book">Add a book</button>
+    <form hidden action="#" class="new-book-form">
+      
+        <label>
+          name <input type="text" name="title">
+        </label>
+        <label>
+          author <input type="text" name="author">
+        </label>
+        <br>
+
+        <label>
+          pages <input type="number" name="pageCount">
+        </label>
+        <label>
+          already read?<input type="checkbox" name="readStatus">
+        </label>
+        <br>
+
+        <input type="submit" value="Submit">
+    </form>
+  </main>
+</body>
+</html>
