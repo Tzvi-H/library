@@ -1,19 +1,25 @@
 let myLibrary = [];
 
-function Book(attributes) {
-  this.title = attributes.title;
-  this.author = attributes.author;
-  this.pages = Number(attributes.pageCount);
-  this.readStatus = attributes.readStatus || false
+class Book {
+  constructor(attributes) {
+    this.title = attributes.title;
+    this.author = attributes.author;
+    this.pages = Number(attributes.pageCount);
+    this.readStatus = attributes.readStatus || false
+  }
 
-  this.toggleRead = function() {
+  toggleRead() {
     this.readStatus = !this.readStatus
+  }
+
+  addToLibrary(library) {
+    library.push(this)
   }
 }
 
 function addBookToLibrary(attributes) {
   const newBook = new Book(attributes);
-  myLibrary.push(newBook);
+  newBook.addToLibrary(myLibrary)
 }
 
 function renderBooks() {
